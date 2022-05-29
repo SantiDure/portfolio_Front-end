@@ -1,0 +1,197 @@
+
+body{
+   color: white; 
+  background-color: black;
+}
+
+.bg{
+  color: white;
+  background-color: rgb(0, 0, 0);
+  align-content: flex-start;
+  align-items: center;
+  display: flex;
+ justify-content: space-between;
+
+}
+
+#logo{
+  width: 8em;
+}
+
+.redes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0em;
+}
+
+.redes .margenRedes{
+  margin: 1em;
+}
+.margenRedes, .hashtag{
+  text-decoration: none;
+  color: white;
+}
+
+.redes .login{
+  margin: 1em
+}
+
+#perfil{
+  max-width: 9em;
+  border-radius: 50%;
+  margin: 1em;
+}
+
+.puesto-foto{
+  display: flex;
+  flex-direction: row;
+  justify-content:start;
+}
+
+.name{
+  color: white;
+  text-align: start;
+  align-self: center ;
+
+}
+
+.acerca-de{
+  color: white;
+  background-image: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)),
+   url(../src/assets/img/banner.jpg);
+   border-bottom-right-radius: 5%;
+   border-bottom-left-radius: 5%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 10px ;
+
+}
+
+#experiencia{
+  /* color: black; */
+  margin: auto ;
+  /* margin-top: 1px; */
+  margin-left: 15px;
+  margin-right: 15px;
+  /* margin-bottom: 10px; */
+  /* padding-bottom: 10px; */
+
+}
+#presentacion {
+  
+  /* color: black; */
+  /* margin-top: 10px; */
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.login{
+  color: white;
+  border-radius: 25px;
+  border: none;
+  scale: 2em;
+}
+
+.educacion{
+  /* color: black; */
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.conocimientos{
+  margin: auto ;
+  /* margin-top: 1px; */
+  margin-left: 15px;
+  margin-right: 15px
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto ;
+  margin-left: 15px;
+  margin-right: 15px    
+}
+
+.progress{
+  min-width: 18rem;
+  flex-wrap: wrap;
+}
+
+.proyect-h2{
+margin: auto;
+padding-bottom: 30px;
+}
+
+
+
+
+.card{
+  max-width: 18rem;
+  min-width: 18rem;
+  background-color: rgb(25, 135, 84);
+  padding-left: 10px ;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+.card .card-title{
+  text-align: center;
+}
+
+.proyect-cards{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px
+}
+
+.proyect-cards{
+  flex-wrap: wrap;
+}
+
+.contacto{
+  height: 8rem;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+#presentacion, #experiencia, .educacion, .conocimientos, .skills, .proyects{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.proyect-h2, .skills-h2{
+  text-align: center;
+}
+
+.editar, .borrar{
+  /* display: none; */
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+#inputUno, #inputDos{
+  margin-bottom: 15px;
+  display: none;
+}
