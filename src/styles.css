@@ -1,6 +1,6 @@
 
 body{
-   color: white; 
+   color: white;
   background-color: black;
 }
 
@@ -70,18 +70,9 @@ body{
 
 }
 
-#experiencia{
-  /* color: black; */
-  margin: auto ;
-  /* margin-top: 1px; */
-  margin-left: 15px;
-  margin-right: 15px;
-  /* margin-bottom: 10px; */
-  /* padding-bottom: 10px; */
 
-}
 #presentacion {
-  
+
   /* color: black; */
   /* margin-top: 10px; */
   margin-left: 15px;
@@ -119,7 +110,7 @@ body{
   justify-content: space-between;
   margin: auto ;
   margin-left: 15px;
-  margin-right: 15px    
+  margin-right: 15px
 }
 
 .progress{
@@ -149,7 +140,7 @@ padding-bottom: 30px;
   border-radius: 25px;
   text-decoration: none;
   color: white;
-  
+
 }
 
 .card .card-title{
@@ -175,7 +166,7 @@ padding-bottom: 30px;
   text-align: center;
 }
 
-#presentacion, #experiencia, .educacion, .conocimientos, .skills, .proyects{
+#presentacion, .educacion, .conocimientos, .skills, .proyects{
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -188,7 +179,7 @@ padding-bottom: 30px;
   /* display: none; */
   margin-left: 5px;
   margin-right: 5px;
-  
+
 }
 
 #inputUno, #inputDos{

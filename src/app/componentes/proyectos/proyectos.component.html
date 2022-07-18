@@ -4,27 +4,24 @@
     <button type="button" class="btn btn-success editar">Editar</button>
     <button type="button" class="btn btn-danger borrar">X</button>
   </h2>
-  <div class="proyect-cards ">
+  <div class="proyect-cards " *ngFor="let pro of proyectos">
 
     <div class="card">
       <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">Proyecto 1</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam sapiente nemo accusantium fuga tempore,
-        odit quo sed qui id iste ullam autem quia, quae accusamus ea fugiat magni harum.</p>
+      <h5 class="card-title">{{pro.nombre}}</h5>
+      <p>{{pro.descripcion}}</p>
     </div>
 
     <div class="card">
       <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">Proyecto 2</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam sapiente nemo accusantium fuga tempore,
-        odit quo sed qui id iste ullam autem quia, quae accusamus ea fugiat magni harum.</p>
+      <h5 class="card-title">{{pro.nombre}}</h5>
+      <p>{{pro.descripcion}}</p>
     </div>
 
     <div class="card">
       <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">Proyecto 3</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam sapiente nemo accusantium fuga tempore,
-        odit quo sed qui id iste ullam autem quia, quae accusamus ea fugiat magni harum.</p>
+      <h5 class="card-title">{{pro.nombre}}</h5>
+      <p>{{pro.descripcion}}</p>
     </div>
 
   </div>

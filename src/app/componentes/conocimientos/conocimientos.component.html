@@ -4,29 +4,11 @@
       <button type="button" class="btn btn-success editar">Editar</button>
       <button type="button" class="btn btn-danger borrar">X</button>
     </h2>
-    <ul>
-      <li>Conocimientos en mantenimiento de PC, Instalación de Software y Sistemas Operativos.</li>
-      <li>Extensión universitaria, Microsoft Power Point, Universidad Tecnológica Nacional (2019).</li>
-      <li>Extensión universitaria, Microsoft Excel, Universidad Tecnológica Nacional (2018).</li>
-      <li>Extensión universitaria, Microsoft Word, Universidad Tecnológica Nacional (2017).</li>
-      <li>Curso de Cuerdas y Nudos, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Noviembre, 2020).
-      </li>
-      <li>Curso de Rescate Vehicular, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Octubre, 2020).
-      </li>
-      <li>Curso de Psicología de la Emergencia, Federación Santafesina de Asociaciones de Bomberos Voluntarios
-        (Septiembre, 2020).</li>
-      <li>Curso de Materiales Peligrosos, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Agosto, 2020).
-      </li>
-      <li>Curso de Atención Prehospitalaria, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Agosto,
-        2020).</li>
-      <li>Curso de Búsqueda y Rescate, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Julio, 2020).
-      </li>
-      <li>Curso de Fuego, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Junio, 2020).</li>
-      <li>Curso de Comunicaciones, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Mayo, 2020).</li>
-      <li>Curso de Seguridad del Bombero, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Mayo, 2020).
-      </li>
-      <li>Curso de Organización Bomberil, Federación Santafesina de Asociaciones de Bomberos Voluntarios (Febrero,
-        2020).</li>
+    <ul *ngFor="let est of estudios">
+      <li>{{est.especializacion}}</li>
+      <li>{{est.especializacion}}</li>
+      <li>{{est.especializacion}}</li>
+
     </ul>
     <input id="inputUno" type="text" placeholder="Presentate">
   </div>

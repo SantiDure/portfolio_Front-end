@@ -1,7 +1,7 @@
   <!-- Acerca de -->
   <div class="acerca-de">
-    <div class="puesto-foto">
+    <div class="puesto-foto" *ngFor="let persona of personas">
       <img id="perfil" src="../assets/img/Perfil.jpg"  alt="Santiago Duré">
-      <h1 class="name">Santiago Duré - Diseñador Web Full Stack Jr.</h1>
+      <h1 class="name">{{persona.nombre}} {{persona.apellido}} - Diseñador Web Full Stack Jr.</h1>
     </div>
   </div>

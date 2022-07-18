@@ -1,15 +1,9 @@
 <!-- Experiencia -->
-<div id="experiencia">
+<div id="experiencia" *ngFor="let exp of experiencias">
   <h2 class="experiencia-h2">Experiencia
-    <button type="button" class="btn btn-success editar" onclick=cambiarParrafo2()>Editar</button>
-    <button type="button" class="btn btn-danger borrar" onclick=ocultarSeccion2()>X</button>
+    <button type="button" class="btn btn-success editar" >Editar</button>
+    <button type="button" class="btn btn-danger borrar" >X</button>
   </h2>
-  <p id="texto2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia neque repellat
-    doloribus accusantium, laudantium porro blanditiis animi accusamus inventore, eaque nam labore reiciendis harum
-    nostrum consequuntur! Quibusdam, deserunt minus Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    Doloremque, omnis totam. Eum aspernatur, accusantium tempora repudiandae itaque ullam quos deserunt voluptatem.
-    Placeat sint quae, maxime nostrum perferendis velit exercitationem cum. Lorem, ipsum dolor sit amet consectetur
-    adipisicing elit. Unde ex itaque repudiandae adipisci porro. Ducimus, ratione voluptatibus culpa sed placeat
-    minus. Voluptas ratione eligendi eos, nulla unde molestias fugiat tenetur!</p>
-  <input id="inputDos" type="text" placeholder="¿Cual es tu experiencia?" oninput="textoIngresado2(this.value)">
+  <p id="texto2">{{exp.descripcion}}</p>
+  <input id="inputDos" type="text" placeholder="¿Cual es tu experiencia?">
 </div>

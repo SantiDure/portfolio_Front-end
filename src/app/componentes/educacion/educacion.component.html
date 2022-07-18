@@ -4,15 +4,12 @@
     <button type="button" class="btn btn-success editar">Editar</button>
     <button type="button" class="btn btn-danger borrar">X</button>
   </h2>
-  <ul>
-    <li>Tercer año universitario, Tecnicatura en Diseño Gráfico y Animación Digital, Universidad Siglo 21
-      (2020-Actualidad).</li>
-    <li>Realizando segunda etapa del curso Nacional Argentina Programa, etapa llamada #YoProgramo (Orientado a
-      desarrollo web).</li>
-    <li>Primera etapa finalizada del curso Nacional Argentina Programa, etapa llamada #SéProgramar (Conceptos básicos
-      sobre programación).</li>
-    <li>Curso, Robótica Fundamentos, E.E.S.O.P.I Nuestra Señora de las Mercedes 8120 (2019). </li>
-    <li>Título secundario, Bachiller en Economía y Administración (2015-2019).</li>
+  <ul *ngFor="let est of estudios">
+    <li>{{est.especializacion}}</li>
+    <li>{{est.especializacion}}</li>
+    <li>{{est.especializacion}}</li>
+    <li>{{est.especializacion}}</li>
+    <li>{{est.especializacion}}</li>
   </ul>
   <input id="inputUno" type="text" placeholder="Presentate">
 </div>
