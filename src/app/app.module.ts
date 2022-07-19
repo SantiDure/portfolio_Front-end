@@ -20,7 +20,8 @@ import { ExperienciaService } from './servicios/experiencia.service';
 import { EstudioService } from './servicios/estudio.service';
 import { HabilidadService } from './servicios/habilidad.service';
 import { ProyectoService } from './servicios/proyecto.service';
-
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -41,9 +42,10 @@ import { ProyectoService } from './servicios/proyecto.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [PersonaService, ExperienciaService, EstudioService, HabilidadService, ProyectoService],
+  providers: [PersonaService, ExperienciaService, EstudioService, HabilidadService, ProyectoService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

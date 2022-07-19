@@ -14,7 +14,8 @@
       <a class="margenRedes" href="https://www.instagram.com/santiagodure">Instagram</a>
       <!-- <a class="margenRedes" href=#>Telegram</a>       -->
       <!-- <button class="login">login</button> -->
-      <button type="button" class="btn btn-danger login">Cerrar sesión</button>
+      <button type="button" class="btn btn-success login" (click)="login()"*ngIf="!isLogged">Iniciar sesión</button>
+      <button type="button" class="btn btn-danger login" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</button>
 
     </div>
   </div>
