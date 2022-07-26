@@ -1,9 +1,35 @@
-<!-- Experiencia -->
-<div id="experiencia" *ngFor="let exp of experiencias">
-  <h2 class="experiencia-h2">Experiencia
-    <button type="button" class="btn btn-success editar" >Editar</button>
-    <button type="button" class="btn btn-danger borrar" >X</button>
-  </h2>
-  <p id="texto2">{{exp.descripcion}}</p>
-  <input id="inputDos" type="text" placeholder="¿Cual es tu experiencia?">
+<div class="row" id="experiencia">
+  <h2 class="experiencia-h2">Experiencia laboral</h2>
+  <div class="col-lg-2">
+
+      <button type="button" class="btn btn-success" routerLink="/nuevaexp" *ngIf="isLogged">
+        Agregar
+    </button>
+
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11 ">
+      <table class="table">
+          <tbody>
+              <tr *ngFor="let exp of experiencias">
+                  <td>
+                      <b>{{exp.nombreE}}</b>
+                  </td>
+                  <td>{{exp.descripcionE}}</td>
+
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-warning" routerLink="/editexp/{{exp.id}}">
+                          <i class="bi bi-pencil-fill"></i> Editar</button>
+                  </td>
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-danger" (click)="delete(exp.id)">
+                          <i class="bi bi-trash-fill"></i> Borrar</button>
+                  </td>
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
 </div>

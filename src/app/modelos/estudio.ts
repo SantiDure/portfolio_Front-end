@@ -1,14 +1,10 @@
 export class Estudio {
   id?: number;
-  nombreInstitucion: string;
+  nombreEst: string;
   especializacion: string;
-  fechaInicio: Date;
-  fechaFin: Date;
 
-  constructor(nombreInstitucion: string, especializacion: string, fechaInicio: Date, fechaFin: Date){
-      this.nombreInstitucion = nombreInstitucion;
+  constructor(nombreEst: string, especializacion: string){
+      this.nombreEst = nombreEst;
       this.especializacion = especializacion;
-      this.fechaInicio = fechaInicio;
-      this.fechaFin = fechaFin;
-  }
+    }
 }

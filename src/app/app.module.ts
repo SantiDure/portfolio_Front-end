@@ -22,6 +22,12 @@ import { HabilidadService } from './servicios/habilidad.service';
 import { ProyectoService } from './servicios/proyecto.service';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './servicios/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { EditEstudiosComponent } from './componentes/educacion/edit-estudios.component';
+import { NewEstudiosComponent } from './componentes/educacion/new-estudios.component';
+import { NewConocimientosComponent } from './componentes/conocimientos/new-conocimientos.component';
+import { EditConocimientosComponent } from './componentes/conocimientos/edit-conocimientos.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,12 @@ import { interceptorProvider } from './servicios/interceptor-service';
     FooterComponent,
     LoginComponent,
     PortfolioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    EditEstudiosComponent,
+    NewEstudiosComponent,
+    NewConocimientosComponent,
+    EditConocimientosComponent,
     ],
   imports: [
     BrowserModule,

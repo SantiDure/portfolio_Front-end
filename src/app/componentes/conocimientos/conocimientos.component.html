@@ -1,14 +1,35 @@
-  <!-- Conocimientos -->
-  <div class="conocimientos">
-    <h2 class="conocimientos-h2">Conocimientos Extra
-      <button type="button" class="btn btn-success editar">Editar</button>
-      <button type="button" class="btn btn-danger borrar">X</button>
-    </h2>
-    <ul *ngFor="let est of estudios">
-      <li>{{est.especializacion}}</li>
-      <li>{{est.especializacion}}</li>
-      <li>{{est.especializacion}}</li>
+<div class="row" id="conocimientos" class="conocimientos">
+  <h2 class="conocimientos-h2">Conocimientos Útiles</h2>
+  <div class="col-lg-2">
 
-    </ul>
-    <input id="inputUno" type="text" placeholder="Presentate">
+      <button type="button" class="btn btn-success" routerLink="/nuevocono" *ngIf="isLogged">
+        Agregar
+    </button>
+
   </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+      <table class="table">
+          <tbody>
+              <tr *ngFor="let cono of conocimientos">
+                  <td>
+                      <b>{{cono.nombreC}}</b>
+                  </td>
+
+
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-warning" routerLink="/editcono/{{cono.id}}">
+                          <i class="bi bi-pencil-fill"></i>Editar</button>
+                  </td>
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-danger" (click)="delete(cono.id)">
+                          <i class="bi bi-trash-fill"></i>Borrar</button>
+                  </td>
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container" *ngIf="cono">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="nombreC">Nombre</label>
+                  <input type="text" class="form-control" id="nombreC" name="nombreC" [(ngModel)]="cono.nombreC" required>
+              </div>
+
+              <button class="btn btn-primary">
+                  Actualizar
+              </button>
+          </form>
+      </div>
+  </div>
+</div>

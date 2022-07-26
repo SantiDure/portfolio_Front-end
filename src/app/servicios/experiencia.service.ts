@@ -9,20 +9,28 @@ import { environment } from 'src/environments/environment';
 })
 export class ExperienciaService {
 
-  private apiUrl = environment.apiUrl;
+  private expUrl = environment.expUrl;
 
   constructor(private HttpClient: HttpClient) { }
 
-  public verExperiencias(): Observable<Experiencia[]> {
-    return this.HttpClient.get<Experiencia[]>(`${this.apiUrl}/ver/experiencias`);
+  public lista(): Observable<Experiencia[]>{
+    return this.HttpClient.get<Experiencia[]>(this.expUrl + 'lista');
   }
 
-  public agregarExperiencia(): Observable<Experiencia>  {
-    return this.HttpClient.post<Experiencia>(`${this.apiUrl}/new/experiencia`, Experiencia);
+  public detail(id: number): Observable<Experiencia>{
+    return this.HttpClient.get<Experiencia>(this.expUrl + `detail/${id}`);
   }
 
-  public borrarExperiencia(id: number): Observable<Experiencia> {
-    return this.HttpClient.delete<Experiencia>(`${this.apiUrl}/delete/experiencia/${id}`);
+  public save(experiencia: Experiencia): Observable<any>{
+    return this.HttpClient.post<any>(this.expUrl + 'create', experiencia);
+  }
+
+  public update(id: number, experiencia: Experiencia): Observable<any>{
+    return this.HttpClient.put<any>(this.expUrl + `update/${id}`, experiencia);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.HttpClient.delete<any>(this.expUrl + `delete/${id}`);
   }
 
 }

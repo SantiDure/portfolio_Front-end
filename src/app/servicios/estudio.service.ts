@@ -9,19 +9,28 @@ import { environment } from 'src/environments/environment';
 })
 export class EstudioService {
 
-  private apiUrl = environment.apiUrl;
+  private estUrl = environment.estUrl;
 
   constructor(private HttpClient: HttpClient) { }
 
-  public verEstudios(): Observable<Estudio[]> {
-    return this.HttpClient.get<Estudio[]>(`${this.apiUrl}/ver/estudios`);
+  public lista(): Observable<Estudio[]>{
+    return this.HttpClient.get<Estudio[]>(this.estUrl + 'lista');
   }
 
-  public agregarEstudio(): Observable<Estudio>  {
-    return this.HttpClient.post<Estudio>(`${this.apiUrl}/new/estudio`, Estudio);
+  public detail(id: number): Observable<Estudio>{
+    return this.HttpClient.get<Estudio>(this.estUrl + `detail/${id}`);
   }
 
-  public borrarEstudio(id: number): Observable<Estudio> {
-    return this.HttpClient.delete<Estudio>(`${this.apiUrl}/delete/estudio/${id}`);
+  public save(estudio: Estudio): Observable<any>{
+    return this.HttpClient.post<any>(this.estUrl + 'create', estudio);
   }
+
+  public update(id: number, estudio: Estudio): Observable<any>{
+    return this.HttpClient.put<any>(this.estUrl + `update/${id}`, estudio);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.HttpClient.delete<any>(this.estUrl + `delete/${id}`);
+  }
+
 }

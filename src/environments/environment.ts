@@ -5,7 +5,13 @@
 export const environment = {
   production: false,
   apiUrl:'http://localhost:8080',
-  authUrl:'http://localhost:8080/auth/'
+  authUrl:'http://localhost:8080/auth/',
+  expUrl:'http://localhost:8080/explab/',
+  editExpUrl:'http://localhost:8080/editexp/',
+  estUrl:'http://localhost:8080/est/',
+  editEstUrl:'http://localhost:8080/editest/',
+  conoUrl:'http://localhost:8080/cono/',
+  editConoUrl:'http://localhost:8080/editcono/'
 };
 
 /*

@@ -1,7 +1,5 @@
 export interface Estudio {
   id?: number;
-  nombreInstitucion: string;
+  nombreEst: string;
   especializacion: string;
-  fechaInicio: Date;
-  fechaFin: Date;
-}
+  }

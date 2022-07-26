@@ -1,15 +1,35 @@
- <!-- Educacion -->
- <div class="educacion">
-  <h2 class="educaion-h2">Educación
-    <button type="button" class="btn btn-success editar">Editar</button>
-    <button type="button" class="btn btn-danger borrar">X</button>
-  </h2>
-  <ul *ngFor="let est of estudios">
-    <li>{{est.especializacion}}</li>
-    <li>{{est.especializacion}}</li>
-    <li>{{est.especializacion}}</li>
-    <li>{{est.especializacion}}</li>
-    <li>{{est.especializacion}}</li>
-  </ul>
-  <input id="inputUno" type="text" placeholder="Presentate">
+<div class="row" id="educacion" class="educacion">
+  <h2 class="educacion-h2">Estudios</h2>
+  <div class="col-lg-2">
+
+      <button type="button" class="btn btn-success" routerLink="/nuevoest" *ngIf="isLogged">
+        Agregar
+    </button>
+
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+      <table class="table">
+          <tbody>
+              <tr *ngFor="let est of estudios">
+                  <td>
+                      <b>{{est.nombreEst}}</b>
+                  </td>
+                  <td>{{est.especializacion}}</td>
+
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-warning" routerLink="/editest/{{est.id}}">
+                          <i class="bi bi-pencil-fill"></i>Editar</button>
+                  </td>
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-danger" (click)="delete(est.id)">
+                          <i class="bi bi-trash-fill"></i>Borrar</button>
+                  </td>
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
 </div>
