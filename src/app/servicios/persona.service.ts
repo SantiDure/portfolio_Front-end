@@ -9,24 +9,28 @@ import { environment } from 'src/environments/environment';
 })
 export class PersonaService {
 
-
-  private apiUrl = environment.apiUrl;
+  private persoUrl = environment.persoUrl;
 
   constructor(private HttpClient: HttpClient) { }
 
-  public verPersonas(): Observable<Persona[]> {
-    return this.HttpClient.get<Persona[]>(`${this.apiUrl}/ver/personas`);
+  public lista(): Observable<Persona[]>{
+    return this.HttpClient.get<Persona[]>(this.persoUrl + 'lista');
   }
 
-  public agregarPersona(): Observable<Persona>  {
-    return this.HttpClient.post<Persona>(`${this.apiUrl}/new/persona`, Persona);
+  public detail(id: number): Observable<Persona>{
+    return this.HttpClient.get<Persona>(this.persoUrl + `detail/${id}`);
   }
 
-  public verPersonaId(id: number): Observable<Persona[]> {
-    return this.HttpClient.get<Persona[]>(`${this.apiUrl}/ver/persona/${id}`);
+  public save(persona: Persona): Observable<any>{
+    return this.HttpClient.post<any>(this.persoUrl + 'create', persona);
   }
 
-  public borrarPersona(id: number): Observable<Persona> {
-    return this.HttpClient.delete<Persona>(`${this.apiUrl}/delete/persona/${id}`);
+  public update(id: number, persona: Persona): Observable<any>{
+    return this.HttpClient.put<any>(this.persoUrl + `update/${id}`, persona);
   }
+
+  public delete(id: number): Observable<any>{
+    return this.HttpClient.delete<any>(this.persoUrl + `delete/${id}`);
+  }
+
 }

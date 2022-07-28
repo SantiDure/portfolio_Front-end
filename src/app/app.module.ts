@@ -28,6 +28,8 @@ import { EditEstudiosComponent } from './componentes/educacion/edit-estudios.com
 import { NewEstudiosComponent } from './componentes/educacion/new-estudios.component';
 import { NewConocimientosComponent } from './componentes/conocimientos/new-conocimientos.component';
 import { EditConocimientosComponent } from './componentes/conocimientos/edit-conocimientos.component';
+import { NewPresentacionComponent } from './componentes/presentacion/new-presentacion.component';
+import { EditPresentacionComponent } from './componentes/presentacion/edit-presentacion.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { EditConocimientosComponent } from './componentes/conocimientos/edit-con
     NewEstudiosComponent,
     NewConocimientosComponent,
     EditConocimientosComponent,
+    NewPresentacionComponent,
+    EditPresentacionComponent,
     ],
   imports: [
     BrowserModule,

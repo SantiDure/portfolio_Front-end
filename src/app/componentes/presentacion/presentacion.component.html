@@ -1,10 +1,24 @@
-<!-- Presentacion -->
-<div id="presentacion" *ngFor="let persona of personas">
-  <h2 class="presentacion-h2">Presentacion
-    <button  class="btn btn-success editar">Editar</button>
-    <button  class="btn btn-danger borrar">X</button>
-  </h2>
-  <p class="presentacion-p" id="texto1">{{persona.presentacion}}</p>
+<div class="row" id="presentacion">
+  <h2 class="presentacion-h2">Presentacion</h2>
+   <div class="col-lg-2"></div>
+  <div class="col lg 1"></div>
+  <div class="col-lg-11 ">
+      <table class="table">
+          <tbody>
+              <tr *ngFor="let per of personas">
+                  <td>
+                      {{per.presentacion}}
+                  </td>
 
-  <input  id='inputUno' type="text" placeholder="Presentate">
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-warning" routerLink="/editper/{{per.id}}">
+                          <i class="bi bi-pencil-fill"></i> Editar</button>
+                  </td>
+
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
 </div>

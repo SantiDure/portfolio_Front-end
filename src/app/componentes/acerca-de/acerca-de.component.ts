@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/interfaces/ipersona';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,22 +11,33 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
 
- public personas!: Persona[];
+  isLogged = false;
+  public personas: Persona[] = [];
 
-  constructor(private peService : PersonaService) { }
+  constructor(private peService : PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-      this.traerPersona();
+    this.cargarPersona();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  public traerPersona(){
-    this.peService.verPersonas().subscribe(
-  (response: Persona[]) =>{
-    this.personas = response;
-  },
-  (error: HttpErrorResponse) =>{
-    alert(error.message);
+  cargarPersona(): void {
+    this.peService.lista().subscribe(data => { this.personas = data; })
   }
-  );
+
+  delete(id?: number){
+    if(id != undefined){
+      this.peService.delete(id).subscribe(
+        data => {
+          this.cargarPersona();
+        }, err => {
+          alert("No se pudo borrar la persona");
+        }
+      )
+    }
   }
 }
