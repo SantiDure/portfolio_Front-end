@@ -1,29 +1,36 @@
 <!--Proyectos -->
 <div class="proyects">
   <h2 class="proyect-h2">Proyectos
-    <button type="button" class="btn btn-success editar">Editar</button>
-    <button type="button" class="btn btn-danger borrar">X</button>
-  </h2>
-  <div class="proyect-cards " *ngFor="let pro of proyectos">
+    <div class="col-lg-2">
 
-    <div class="card">
-      <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">{{pro.nombre}}</h5>
-      <p>{{pro.descripcion}}</p>
-    </div>
-
-    <div class="card">
-      <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">{{pro.nombre}}</h5>
-      <p>{{pro.descripcion}}</p>
-    </div>
-
-    <div class="card">
-      <div class="card'image" src="..." alt="..."></div>
-      <h5 class="card-title">{{pro.nombre}}</h5>
-      <p>{{pro.descripcion}}</p>
-    </div>
+      <button type="button" class="btn btn-success" routerLink="/nuevoproy" *ngIf="isLogged">
+        Agregar
+    </button>
 
   </div>
+
+  </h2>
+<div id="proy-align" >
+  <div class="proyect-cards "  *ngFor="let pro of proyectos">
+
+    <div class="card">
+      <div class="card'image" ></div>
+      <h5 class="card-title">{{pro.nombre}}</h5>
+      <p>{{pro.descripcion}}</p>
+
+      <td *ngIf="isLogged">
+        <button class="btn btn-warning" routerLink="/editproy/{{pro.id}}">
+            <i class="bi bi-pencil-fill"></i> Editar</button>
+    </td>
+    <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(pro.id)">
+            <i class="bi bi-trash-fill"></i> Borrar</button>
+    </td>
+    </div>
+
+
+
+  </div>
+</div>
   <input id="inputUno" type="text" placeholder="Presentate">
 </div>

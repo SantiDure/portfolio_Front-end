@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/modelos/proyecto';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -10,23 +11,33 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ProyectosComponent implements OnInit {
 
-  public proyectos!: Proyecto[];
+  isLogged = false;
+  public proyectos: Proyecto[] = [];
 
-  constructor(private proService: ProyectoService) { }
+  constructor(private proyService: ProyectoService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-  this.traerProyectos();
+    this.cargarProyecto();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-
-  public traerProyectos(){
-    this.proService.verProyectos().subscribe(
-  (response: Proyecto[]) =>{
-    this.proyectos = response;
-  },
-  (error: HttpErrorResponse) =>{
-    alert(error.message);
+  cargarProyecto(): void {
+    this.proyService.lista().subscribe(data => { this.proyectos = data; })
   }
-  );
+
+  delete(id?: number){
+    if(id != undefined){
+      this.proyService.delete(id).subscribe(
+        data => {
+          this.cargarProyecto();
+        }, err => {
+          alert("No se pudo borrar el proyecto");
+        }
+      )
+    }
   }
 }

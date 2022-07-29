@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Habilidad } from 'src/app/modelos/habilidad';
 import { HabilidadService } from 'src/app/servicios/habilidad.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -10,23 +11,34 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
 })
 export class HabilidadesComponent implements OnInit {
 
-  public habilidades!: Habilidad[];
+  isLogged = false;
+  public habilidades: Habilidad[] = [];
 
-  constructor(private habiService: HabilidadService) { }
+  constructor(private habiService: HabilidadService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-  this.traerHabilidades();
+    this.cargarHabilidad();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-
-  public traerHabilidades(){
-    this.habiService.verHabilidades().subscribe(
-  (response: Habilidad[]) =>{
-    this.habilidades = response;
-  },
-  (error: HttpErrorResponse) =>{
-    alert(error.message);
+  cargarHabilidad(): void {
+    this.habiService.lista().subscribe(data => { this.habilidades = data; })
   }
-  );
+
+  delete(id?: number){
+    if(id != undefined){
+      this.habiService.delete(id).subscribe(
+        data => {
+          this.cargarHabilidad();
+        }, err => {
+          alert("No se pudo borrar la habilidad");
+        }
+      )
+    }
   }
 }
+

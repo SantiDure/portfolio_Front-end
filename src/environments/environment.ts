@@ -13,7 +13,12 @@ export const environment = {
   conoUrl:'http://localhost:8080/cono/',
   editConoUrl:'http://localhost:8080/editcono/',
   persoUrl:'http://localhost:8080/per/',
-  editPersoUrl:'http://localhost:8080/editper/'
+  editPersoUrl:'http://localhost:8080/editper/',
+  proyUrl:'http://localhost:8080/proy/',
+  editProyUrl:'http://localhost:8080/editproy/',
+  habUrl:'http://localhost:8080/hab/',
+  editHabUrl:'http://localhost:8080/edithab/'
+
 };
 
 /*

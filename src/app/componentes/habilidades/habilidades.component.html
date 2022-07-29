@@ -1,23 +1,23 @@
  <!-- Habilidades -->
- <div class="skills" *ngFor="let habi of habilidades">
-  <h2 class="skills-h2">Skills
-    <button type="button" class="btn btn-success editar">Editar</button>
-    <button type="button" class="btn btn-danger borrar">X</button>
-  </h2>
-  <h5 class="skills-h5">{{habi.nombre}}</h5>
+ <div class="skills">
+  <h2 class="skills-h2">Skills</h2>
+  <div class="col-lg-2">
+
+    <button type="button" class="btn btn-success" routerLink="/nuevahab" *ngIf="isLogged">
+      Agregar
+  </button>
+
+</div>
+<div *ngFor="let habi of habilidades">
+  <h4 class="skills-h5">{{habi.nombre}} </h4>
+  <h6>({{habi.tiempoDeExperiencia}})</h6>
   <div class="progress" style="height: 25px;">
-    <div class="progress-bar bg-success prueba-bar" role="progressbar" style="width: 80%" aria-valuenow="25"
-      aria-valuemin="0" aria-valuemax="100"><strong>80%</strong></div>
-  </div><br>
-  <h5 class="skills-h5">{{habi.nombre}}</h5>
-  <div class="progress" style="height: 25px;">
-    <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0"
-      aria-valuemax="100"><strong>70%</strong></div>
-  </div><br>
-  <h5 class="skills-h5">{{habi.nombre}}</h5>
-  <div class="progress" style="height: 25px;">
-    <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0"
-      aria-valuemax="100"><strong>45%</strong></div>
-  </div><br>
-  <input id="inputUno" type="text" placeholder="Presentate">
+    <div class="progress-bar bg-success prueba-bar" [ngStyle]="{'width': habi.porcentaje  + '%'}" role="progressbar"  aria-valuenow="25"
+      aria-valuemin="0" aria-valuemax="100">{{habi.porcentaje}}%</div>
+  </div>
+  <div  *ngIf="isLogged"><button class="btn btn-warning" routerLink="/edithab/{{habi.id}}">
+    <i class="bi bi-pencil-fill"></i> Editar</button></div>
+  <div  *ngIf="isLogged"> <button class="btn btn-danger" (click)="delete(habi.id)">
+    <i class="bi bi-trash-fill"></i> Borrar</button></div>
+</div>
 </div>

@@ -30,6 +30,10 @@ import { NewConocimientosComponent } from './componentes/conocimientos/new-conoc
 import { EditConocimientosComponent } from './componentes/conocimientos/edit-conocimientos.component';
 import { NewPresentacionComponent } from './componentes/presentacion/new-presentacion.component';
 import { EditPresentacionComponent } from './componentes/presentacion/edit-presentacion.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { EditHabilidadComponent } from './componentes/habilidades/edit-habilidad.component';
+import { NewHabilidadComponent } from './componentes/habilidades/new-habilidad.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +57,10 @@ import { EditPresentacionComponent } from './componentes/presentacion/edit-prese
     EditConocimientosComponent,
     NewPresentacionComponent,
     EditPresentacionComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    EditHabilidadComponent,
+    NewHabilidadComponent,
     ],
   imports: [
     BrowserModule,
