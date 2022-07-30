@@ -3,6 +3,6 @@
     <div class="puesto-foto" *ngFor="let persona of personas">
       <!-- aca falta agregar el url de la foto -->
       <img id="perfil" src={{persona.urlFoto}}  alt="Santiago Duré">
-      <h1 class="name">{{persona.nombre}} {{persona.apellido}} - Diseñador Web Full Stack Jr.</h1>
+      <h1 class="name">{{persona.nombre}} {{persona.apellido}} - {{persona.tituloProfesional}}.</h1>
     </div>
   </div>

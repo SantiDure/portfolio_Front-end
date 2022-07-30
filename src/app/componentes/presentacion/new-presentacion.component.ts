@@ -15,6 +15,7 @@ export class NewPresentacionComponent implements OnInit {
   presentacion: string = '';
   telefono: string = '';
   urlFoto: string = '';
+  tituloProfesional: string = '';
 
   constructor(private persoServ: PersonaService, private router: Router) { }
 
@@ -22,7 +23,7 @@ export class NewPresentacionComponent implements OnInit {
   }
 
   onCreate(): void {
-    const per = new Persona (this.nombre, this.apellido, this.email, this.urlFoto, this.presentacion, this.telefono);
+    const per = new Persona (this.nombre, this.apellido, this.email, this.urlFoto, this.presentacion, this.telefono, this.tituloProfesional);
     this.persoServ.save(per).subscribe(
       data => {
         alert("Presentacion añadida");

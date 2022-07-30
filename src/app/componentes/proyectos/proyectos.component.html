@@ -10,14 +10,14 @@
   </div>
 
   </h2>
-<div id="proy-align" >
+<div id="cards-group">
   <div class="proyect-cards "  *ngFor="let pro of proyectos">
 
     <div class="card">
       <div class="card'image" ></div>
       <h5 class="card-title">{{pro.nombre}}</h5>
       <p>{{pro.descripcion}}</p>
-
+<div id="button-gruop">
       <td *ngIf="isLogged">
         <button class="btn btn-warning" routerLink="/editproy/{{pro.id}}">
             <i class="bi bi-pencil-fill"></i> Editar</button>
@@ -26,11 +26,8 @@
         <button class="btn btn-danger" (click)="delete(pro.id)">
             <i class="bi bi-trash-fill"></i> Borrar</button>
     </td>
+  </div>
     </div>
-
-
-
   </div>
 </div>
-  <input id="inputUno" type="text" placeholder="Presentate">
 </div>

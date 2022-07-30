@@ -1,0 +1,12 @@
+button{
+  margin: 10px;
+}
+
+#buttons-group{
+  display: flex;
+}
+
+#habi-group{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

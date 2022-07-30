@@ -6,4 +6,6 @@ export interface Persona {
   urlFoto: string;
   presentacion: string;
   telefono: string;
+  tituloProfesional: string;
+
 }

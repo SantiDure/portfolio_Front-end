@@ -1,7 +1,7 @@
-
 body{
    color: white;
   background-color: black;
+
 }
 
 .bg{
@@ -12,8 +12,8 @@ body{
   display: flex;
  justify-content: space-between;
 
-}
 
+}
 
 #logo{
   width: 8em;
@@ -55,7 +55,6 @@ body{
   color: white;
   text-align: start;
   align-self: center ;
-
 }
 
 .acerca-de{
@@ -69,17 +68,6 @@ body{
   background-size: cover;
   margin-bottom: 10px ;
 
-}
-
-
-#presentacion {
-
-  /* color: black; */
-  /* margin-top: 10px; */
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
 }
 
 .login{
@@ -100,7 +88,6 @@ body{
 
 .conocimientos{
   margin: auto ;
-  /* margin-top: 1px; */
   margin-left: 15px;
   margin-right: 15px
 }
@@ -122,10 +109,8 @@ body{
 .proyect-h2{
 margin: auto;
 padding-bottom: 30px;
+text-align: center;
 }
-
-
-
 
 .card{
   max-width: 18rem;
@@ -141,7 +126,6 @@ padding-bottom: 30px;
   border-radius: 25px;
   text-decoration: none;
   color: white;
-
 }
 
 .card .card-title{
@@ -156,8 +140,6 @@ padding-bottom: 30px;
 
 }
 
-
-
 .contacto{
   height: 8rem;
   margin-top: 40px;
@@ -166,13 +148,9 @@ padding-bottom: 30px;
   text-align: center;
 }
 
-#presentacion, .educacion, .conocimientos, .skills, .proyects{
+ .educacion, .conocimientos, .skills, .proyects{
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.proyect-h2, .skills-h2{
-  text-align: center;
 }
 
 .editar, .borrar{
@@ -180,9 +158,4 @@ padding-bottom: 30px;
   margin-left: 5px;
   margin-right: 5px;
 
-}
-
-#inputUno, #inputDos{
-  margin-bottom: 15px;
-  display: none;
 }

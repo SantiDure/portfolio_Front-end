@@ -14,17 +14,17 @@
           <tbody>
               <tr *ngFor="let est of estudios">
                   <td>
-                      <b>{{est.nombreEst}}</b>
+                      <b>- {{est.nombreEst}}</b>
                   </td>
                   <td>{{est.especializacion}}</td>
 
                   <td *ngIf="isLogged">
                       <button class="btn btn-warning" routerLink="/editest/{{est.id}}">
-                          <i class="bi bi-pencil-fill"></i>Editar</button>
+                          <i class="bi bi-pencil-fill"></i> Editar</button>
                   </td>
                   <td *ngIf="isLogged">
                       <button class="btn btn-danger" (click)="delete(est.id)">
-                          <i class="bi bi-trash-fill"></i>Borrar</button>
+                          <i class="bi bi-trash-fill"></i> Borrar</button>
                   </td>
 
               </tr>

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-      <div>
+      <div id="newH">
           <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
               <div class="form-group">
                   <label for="nombre">Habilidad</label>
@@ -8,14 +8,14 @@
               </div>
               <div class="form-group">
                   <label for="tiempoDeExperiencia">Tiempo De Experiencia (Aproximado)</label>
-                  <input type="text" class="form-control" id="tiempoDeExperiencia" name="tiempoDeExperiencia" [(ngModel)]="tiempoDeExperiencia" required>
+                  <input type="text" class="form-control" id="tiempoDeExperiencia" name="tiempoDeExperiencia" [(ngModel)]="tiempoDeExperiencia">
               </div>
               <div class="form-group">
                 <label for="porcentaje">Porcentaje (Aproximado)</label>
                 <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
             </div>
               <button class="btn btn-primary">
-                  Agregar Habilidad
+                  Agregar
               </button>
           </form>
       </div>

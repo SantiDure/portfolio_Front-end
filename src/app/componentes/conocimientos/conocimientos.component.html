@@ -14,17 +14,17 @@
           <tbody>
               <tr *ngFor="let cono of conocimientos">
                   <td>
-                      <b>{{cono.nombreC}}</b>
+                      <b>- {{cono.nombreC}}</b>
                   </td>
 
 
                   <td *ngIf="isLogged">
                       <button class="btn btn-warning" routerLink="/editcono/{{cono.id}}">
-                          <i class="bi bi-pencil-fill"></i>Editar</button>
+                          <i class="bi bi-pencil-fill"></i> Editar</button>
                   </td>
                   <td *ngIf="isLogged">
                       <button class="btn btn-danger" (click)="delete(cono.id)">
-                          <i class="bi bi-trash-fill"></i>Borrar</button>
+                          <i class="bi bi-trash-fill"></i> Borrar</button>
                   </td>
 
               </tr>
