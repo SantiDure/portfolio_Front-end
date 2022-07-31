@@ -9,7 +9,7 @@
 
 </div>
 <div *ngFor="let habi of habilidades" id="habi-group">
-  <h4 class="skills-h5"><b>{{habi.nombre}} </b>  {{habi.tiempoDeExperiencia}}  </h4>
+  <h5 class="skills-h5"><b>{{habi.nombre}} </b>  {{habi.tiempoDeExperiencia}}  </h5>
 
   <div class="progress" style="height: 25px;">
     <div class="progress-bar bg-success prueba-bar" [ngStyle]="{'width': habi.porcentaje  + '%'}" role="progressbar"  aria-valuenow="25"

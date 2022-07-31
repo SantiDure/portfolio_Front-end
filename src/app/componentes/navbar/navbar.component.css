@@ -1,0 +1,16 @@
+a{
+  flex-wrap: wrap;
+}
+
+.logo-hashtag{
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px){
+  .logo-hashtag{
+    display: block;
+  }
+  .redes{
+    display: block;
+  }
+}

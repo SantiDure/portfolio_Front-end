@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProyectoService {
 
-  private proyUrl = environment.proyUrl;
+   proyUrl = environment.proyUrl;
 
   constructor(private HttpClient: HttpClient) { }
 
